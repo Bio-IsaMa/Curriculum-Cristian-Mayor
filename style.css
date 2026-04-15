@@ -13,32 +13,49 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.print-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+
 .btn-print {
-    background-color: #2c3e50; 
+    background-color: #ffffff20; 
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    padding: 12px 25px;
+    border: 2px solid white; 
+    border-radius: 50px; 
     cursor: pointer;
-    font-family: inherit;
-    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
+    width: 80%; 
 }
 
 .btn-print:hover {
-    background-color: #34495e;
+    background-color: white;
+    color: #2c3e50; 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
+.btn-print i {
+    font-size: 18px;
+}
 
+/* Ocultar en el PDF final */
 @media print {
     .print-container, .btn-print {
         display: none !important;
     }
 }
-
 body {
     background-color: var(--bg-gray);
     display: flex;
